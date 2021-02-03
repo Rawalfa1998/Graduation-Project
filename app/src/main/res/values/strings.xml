@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Graduation Project</string>
+
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="Repeat_password">Password Confirmation</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="username">Uasername</string>
+    <string name="sent">Send Conformation</string>
+    <string name="emailcom">Email Confirmation</string>
+    <string name="reset">Reset Password</string>
+
+
+    <string name="action_sign_in">Log in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">Welcome!</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="Guest">Guest</string>
+    <string name="Forgot_Password">Forgot Your Password?</string>
+    <string name="Create">You Do not have an a account? </string>
+    <string name="Create2">Create an Account </string>
+    <string name="loged">Registered Already? </string>
+    <string name="loged2">Log in </string>
+    <string name="homepage">Homepage</string>
+
+
+</resources>
