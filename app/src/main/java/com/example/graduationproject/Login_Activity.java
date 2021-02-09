@@ -26,7 +26,6 @@ public class Login_Activity extends AppCompatActivity {
     public TextView forgot,textView3;
     public EditText username,password;
     public ProgressBar progressBar;
-
     FirebaseAuth fAuth;
 
     @Override
@@ -39,6 +38,7 @@ public class Login_Activity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         textView3 = findViewById(R.id.textView3);
         guest_button = findViewById(R.id.Guest);
+        log_button = findViewById(R.id.login);
         forgot = findViewById(R.id.forgot);
         fAuth = FirebaseAuth.getInstance();
         log_button.setOnClickListener(v -> {
