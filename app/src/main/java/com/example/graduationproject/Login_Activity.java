@@ -23,8 +23,8 @@ import java.util.Objects;
 
 public class Login_Activity extends AppCompatActivity {
     public Button log_button, guest_button;
-    public TextView forgot,textView3;
-    public EditText username,password;
+    public TextView forgot, textView3, signup;
+    public EditText username, password;
     public ProgressBar progressBar;
     FirebaseAuth fAuth;
 
@@ -33,6 +33,7 @@ public class Login_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        signup = findViewById(R.id.signup);
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         progressBar = findViewById(R.id.progressBar);
@@ -41,7 +42,9 @@ public class Login_Activity extends AppCompatActivity {
         log_button = findViewById(R.id.login);
         forgot = findViewById(R.id.forgot);
         fAuth = FirebaseAuth.getInstance();
+
         log_button.setOnClickListener(v -> {
+
             String emai1 = username.getText().toString().trim();
             String Password = password.getText().toString().trim();
 
@@ -59,17 +62,17 @@ public class Login_Activity extends AppCompatActivity {
             }
 
             progressBar.setVisibility(View.VISIBLE);
-            fAuth.createUserWithEmailAndPassword(emai1, Password).addOnCompleteListener(task -> {
+            fAuth.signInWithEmailAndPassword(emai1, Password).addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
                     Toast.makeText(Login_Activity.this, "Logged in Successfully.", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(getApplicationContext(), Login_Activity.class));
+                    startActivity(new Intent(getApplicationContext(), Homepage.class));
                 } else {
-                    Toast.makeText(Login_Activity.this, "error" + Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login_Activity.this, "Sorry: " + Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
                 }
 
             });
-            log_button.setOnClickListener(v1 -> startActivity(new Intent(getApplicationContext(), Sign_up.class)));
+            // log_button.setOnClickListener(v1 -> startActivity(new Intent(getApplicationContext(), Homepage.class)));
     /*log_button = (Button) findViewById(R.id.login);
     log_button.setOnClickListener(v -> {
         Intent loginBut = new Intent(Login_Activity.this,Homepage.class);
@@ -87,4 +90,8 @@ public class Login_Activity extends AppCompatActivity {
          Intent forgotText=new Intent(Login_Activity.this, Forgot_Password.class);
          startActivity(forgotText);
      });*/
-        });}}
+        });
+        signup.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), Sign_up.class)));
+    }
+
+}

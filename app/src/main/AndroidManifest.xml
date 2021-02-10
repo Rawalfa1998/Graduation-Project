@@ -18,34 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
          </activity>
-        <!--    <activity android:name=".Forgot_Password">
-              <intent-filter>
-                  <action android:name="android.intent.action.MAIN" />
+         <activity android:name=".Forgot_Password" />
 
-                  <category android:name="android.intent.category.LAUNCHER" />
-              </intent-filter>
-          </activity>
-          <activity android:name=".Sign_up">
-              <intent-filter>
-                  <action android:name="android.intent.action.MAIN" />
+          <activity android:name=".Sign_up" />
 
-                  <category android:name="android.intent.category.LAUNCHER" />
-              </intent-filter>
-          </activity>
-          <activity android:name=".Homepage">
-              <intent-filter>
-                  <action android:name="android.intent.action.MAIN" />
+          <activity android:name=".Homepage"/>
 
-                  <category android:name="android.intent.category.LAUNCHER" />
-              </intent-filter>
-          </activity>
-          <activity android:name=".Login_Activity">
-              <intent-filter>
-                  <action android:name="android.intent.action.MAIN" />
-
-                  <category android:name="android.intent.category.LAUNCHER" />
-              </intent-filter>
-          </activity>-->
 
         <meta-data
             android:name="preloaded_fonts"
