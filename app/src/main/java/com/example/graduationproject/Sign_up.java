@@ -72,9 +72,7 @@ if(fAuth.getCurrentUser()!=null ){
 
                 if(task.isSuccessful()){
                     Toast.makeText ( Sign_up.this, "User Created.",Toast.LENGTH_SHORT).show();
-
-
-                    startActivity(new Intent (getApplicationContext (),Login_Activity.class));
+                    startActivity(new Intent (getApplicationContext (),Homepage.class));
 
                 }else {
                     Toast.makeText( Sign_up.this,"error"+ Objects.requireNonNull(task.getException()).getMessage(),Toast.LENGTH_SHORT).show();

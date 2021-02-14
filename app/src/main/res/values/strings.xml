@@ -10,6 +10,7 @@
     <string name="sent">Send Conformation</string>
     <string name="emailcom">Email Confirmation</string>
     <string name="reset">Reset Password</string>
+    <string name="GuestHome"> Guest home page</string>
 
 
     <string name="action_sign_in">Log in</string>

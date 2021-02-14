@@ -1,8 +1,18 @@
 package com.example.graduationproject;
 
 //import androidx.annotation.NonNull;
+//import androidx.annotation.NonNull;
+//import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+//import com.google.android.gms.tasks.OnCompleteListener;
+//import com.google.android.gms.tasks.Task;
+//import com.google.firebase.auth.AuthResult;
+//import com.google.android.gms.tasks.OnCompleteListener;
+//import com.google.android.gms.tasks.Task;
+//import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+//import com.google.firebase.auth.FirebaseUser;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -16,8 +26,6 @@ import android.widget.Toast;
 
 //import com.google.android.gms.tasks.OnCompleteListener;
 //import com.google.android.gms.tasks.Task;
-//import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Objects;
 
@@ -27,7 +35,7 @@ public class Login_Activity extends AppCompatActivity {
     public EditText username, password;
     public ProgressBar progressBar;
     FirebaseAuth fAuth;
-
+    //private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +50,7 @@ public class Login_Activity extends AppCompatActivity {
         log_button = findViewById(R.id.login);
         forgot = findViewById(R.id.forgot);
         fAuth = FirebaseAuth.getInstance();
+      //  mAuth = FirebaseAuth.getInstance();
 
         log_button.setOnClickListener(v -> {
 
@@ -72,26 +81,13 @@ public class Login_Activity extends AppCompatActivity {
                 }
 
             });
-            // log_button.setOnClickListener(v1 -> startActivity(new Intent(getApplicationContext(), Homepage.class)));
-    /*log_button = (Button) findViewById(R.id.login);
-    log_button.setOnClickListener(v -> {
-        Intent loginBut = new Intent(Login_Activity.this,Homepage.class);
-        startActivity(loginBut);
-    });
-     guest_button = (Button) findViewById(R.id.Guest);
-     guest_button. setOnClickListener(v -> {
-         Intent guestBut = new Intent(Login_Activity.this,Homepage.class);
-         startActivity(guestBut);
-     });
 
-
-     forgot = (TextView) findViewById(R.id.forgot);
-     forgot.setOnClickListener(v -> {
-         Intent forgotText=new Intent(Login_Activity.this, Forgot_Password.class);
-         startActivity(forgotText);
-     });*/
         });
-        signup.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), Sign_up.class)));
+
+
+signup.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), Sign_up.class)));
+        forgot.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), Forgot_Password.class)));
     }
 
-}
+        }
+
